@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Game Xarax</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+    <link rel="stylesheet" href="css/game.css"/>
+    <script src="js/moment.js"></script>
+    <script src="js/artefatos.js"></script>
+</head>
+
+<body>
+<div data-role="page" id="page_register">
+    <div data-role="header" data-theme="c">
+        <h1>Registro</h1>
+    </div><!-- /header -->
+
+    <div data-role="popup" id="popup_error_register" class="content" data-theme="d">
+        <h2>Houve algum erro!</h2>
+    </div>
+
+    <div data-role="popup" id="popup_success_register" class="content" data-theme="d">
+        <h2>Registrado com Sucesso!</h2>
+    </div>
+
+    <div data-role="popup" id="popup_email_invalido" class="content" data-theme="d">
+        <h2>Email invalido!</h2>
+    </div>
+    <!-- popup -->
+    <div data-role="content">
+        <form id="form">
+            <h2 for="email">Email:</h2>
+            <input id="email" type="email" name="email" required>
+            <h2 for="input_senha">Senha:</h2>
+            <input id="input_senha" type="password" name="senha" required>
+            <h2 for="input_senha">Repetir Senha:</h2>
+            <input id="input_se" type="password" required>
+            <br/>
+            <a type="submit" id="btn_registrar" href="#" data-role="button"
+               data-theme="b"
+               style="font-family: 'Bangers'; font-size: 20px;">Registrar</a>
+        </form>
+
+    </div><!-- /content -->
+    <div data-role="footer" data-theme="c" data-position="fixed">
+        <h4>&copy; Xarax 2015</h4>
+    </div>
+</div><!-- /page -->
+
+</body>
+</html>

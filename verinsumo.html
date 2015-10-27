@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Game Xarax</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css"/>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+    <link rel="stylesheet" href="css/game.css"/>
+</head>
+<body>
+
+<div data-role="page" id="page_ver_insumo">
+
+    <div data-role="header" data-position="fixed" data-theme="c">
+        <h1>Ver Insumo</h1>
+    </div>
+    <!-- /header -->
+
+    <div role="main" class="content">
+        <div class="ui-grid-b">
+            <div class="ui-block-a center-wrapper">
+
+            </div>
+            <div class="ui-block-b center-wrapper">
+                <img id="imagem_insumo" src="">
+            </div>
+            <div class="ui-block-c center-wrapper">
+
+            </div>
+        </div><!-- /grid-b -->
+        <div data-role="collapsible-set" data-theme="c" data-content-theme="d">
+            <div data-role="collapsible" data-collapsed="false">
+                <h3>Dados</h3>
+                <div data-role="fieldcontain">
+                    <label>Nome: </label>
+                    <label id="nome_insumo"></label>
+                </div>
+                <div data-role="fieldcontain">
+                    <label>Data fim: </label>
+                    <label id="data_fim_insumo"></label>
+                </div>
+                <div data-role="fieldcontain">
+                    <label>Agride a natureza? : </label>
+                    <label id="agride_insumo"></label>
+                </div>
+            </div>
+            <div data-role="collapsible">
+                <h3>Valores</h3>
+                <div data-role="fieldcontain">
+                    <label>Valor : </label>
+                    <label id="valor_insumo"></label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /content -->
+</div>
+<!-- /page -->
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Game Xarax</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+    <link rel="stylesheet" href="css/game.css"/>
+</head>
+<body>
+
+<div data-role="page" id="page_casa_dos_insumos">
+
+    <div data-role="header" data-position="fixed" data-theme="c">
+        <h1>Game Xarax</h1>
+        <a href="home.html" data-icon="back" data-rel="back" class="ui-btn-right">Voltar</a>
+    </div>
+    <!-- /header -->
+
+    <div role="main" class="content">
+        <div class="ui-grid-b">
+            <div class="ui-block-a center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                    <center><h5>Total</h5><br/>
+                    <h2 id="player_money_casa"></h2>
+                        </center>
+                </div>
+            </div>
+            <div class="ui-block-b center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                    <center><h5>Gasto</h5><br/>
+                    <h2 id="player_gasto_money_casa"></h2>
+                        </center>
+                </div>
+            </div>
+            <div class="ui-block-c center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                    <center><h5>Ganho</h5><br/>
+                    <h2 id="player_ganho_money_casa"></h2>
+                        </center>
+                </div>
+            </div>
+        </div><!-- /grid-b -->
+
+        <div class="list-margin">
+            <div data-role="collapsible" data-collapsed="false" data-theme="b" data-content-theme="d">
+                <h3>Fertilizantes</h3>
+                <ul data-role="listview" data-inset="true" id="lista_fertilizantes">
+                    <li id="adubo_natural_1" data-valor="450" data-nome="Adubo Natural Tipo 1" data-incremento="0.2"
+                        data-local="0" data-decrementa="false" data-duracao="2" data-tipo-duracao="minutes">
+                        <a href="#">
+                            <img src="images/adubonatural1.jpg">
+                            <h2>Adubo Natural Tipo 1</h2>
+                        </a>
+                        <span class="ui-li-count">$ 450,00</span>
+                    </li>
+                    <li id="adubo_natural_2" data-valor="850" data-nome="Adubo Natural Tipo 2" data-incremento="0.5"
+                        data-local="0" data-decrementa="false" data-duracao="5" data-tipo-duracao="minutes">
+                        <a href="#">
+                            <img src="images/adubonatural2.jpg">
+                            <h2>Adubo Natural Tipo 2</h2>
+                        </a>
+                        <span class="ui-li-count">$ 850,00</span>
+                    </li>
+                    <li id="adubo_natural_3" data-valor="1550" data-nome="Adubo Natural Tipo 3" data-incremento="0.8"
+                        data-local="0" data-decrementa="false" data-duracao="8" data-tipo-duracao="minutes">
+                        <a href="#">
+                            <img src="images/fertilizantequimico.jpeg">
+                            <h2>Adubo Natural Tipo 3</h2>
+                        </a>
+                        <span class="ui-li-count">$ 1550,00</span>
+                    </li>
+                    <li id="fertilizante_quimico_1" data-valor="900" data-nome="Embiotic" data-incremento="1"
+                        data-local="0" data-decrementa="true" data-duracao="2" data-tipo-duracao="minutes">
+                        <a href="#">
+                            <img src="images/embiotic.jpg">
+                            <h2>Embiotic</h2>
+                        </a>
+                        <span class="ui-li-count">$ 900,00</span>
+                    </li>
+                    <li id="fertilizante_quimico_2" data-valor="3000" data-nome="Fertilizante Quimico" data-incremento="2"
+                        data-local="0" data-decrementa="true" data-duracao="1" data-tipo-duracao="minutes">
+                        <a href="#">
+                            <img src="images/fertilizantequimico2.jpg">
+                            <h2>Fertilizante Quimico</h2>
+                        </a>
+                        <span class="ui-li-count">$ 3000,00</span>
+                    </li>
+                </ul>
+            </div><!-- /collapsible -->
+            <div data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="true">
+                <h3>Energéticos</h3>
+                <ul data-role="listview" data-inset="true" id="lista_energeticos">
+                    <li id="agua" data-valor="50" data-nome="Agua Natural: Fonte Sublime" data-incremento="20" data-decrementa="false">
+                        <a href="#">
+                            <img src="images/agua.jpg">
+                            <h2>Agua Natural: Fonte Sublime</h2>
+                        </a>
+                        <span class="ui-li-count">$ 50,00</span>
+                    </li>
+                    <li id="leite" data-valor="70" data-nome="Leite natural" data-incremento="25" data-decrementa="false">
+                        <a href="#">
+                            <img src="images/leite.jpg">
+                            <h2>Leite natural</h2>
+                        </a>
+                        <span class="ui-li-count">$ 70,00</span>
+                    </li>
+                    <li id="vitamina" data-valor="90" data-nome="Vitamina de abacate" data-incremento="30" data-decrementa="false">
+                        <a href="#">
+                            <img src="images/Vitamina.jpg">
+                            <h2>Vitamina de Abacate</h2>
+                        </a>
+                        <span class="ui-li-count">$ 90,00</span>
+                    </li>
+                    <li id="suco" data-valor="110" data-nome="Suco de laranja" data-incremento="35" data-decrementa="false">
+                        <a href="#">
+                            <img src="images/Suco.jpg">
+                            <h2>Suco de Laranja</h2>
+                        </a>
+                        <span class="ui-li-count">$ 110,00</span>
+                    </li>
+                    <li id="refrigerante" data-valor="80" data-nome="Refrigerante" data-incremento="30" data-decrementa="true">
+                        <a href="#">
+                            <img src="images/refrigerante.jpg">
+                            <h2>Refrigerante</h2>
+                        </a>
+                        <span class="ui-li-count">$ 80,00</span>
+                    </li>
+                    <li id="pilula" data-valor="110" data-nome="Pilula" data-incremento="40" data-decrementa="true">
+                        <a href="#">
+                            <img src="images/remedios.jpg">
+                            <h2>Pílulas</h2>
+                        </a>
+                        <span class="ui-li-count">$ 110,00</span>
+                    </li>
+                </ul>
+            </div><!-- /collapsible -->
+        </div>
+
+        <br/>
+
+    </div>
+    <!-- /content -->
+
+    <div data-role="footer" data-theme="c" data-position="fixed">
+        <div class="ui-grid-b">
+            <div class="ui-block-a center-wrapper">
+                <div id="div_energia" class="ui-bar ui-bar-b" style="height:60px">
+                    <center><h5>Energia</h5><br/><h2 id="player_energy_num_casa">100</h2><h2>%</h2><br/>
+                        <meter id="player_energy_casa" min="0" low="20" max="100" value="90"></meter>
+                    </center>
+                </div>
+            </div>
+            <div class="ui-block-b center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                    <center><h5>Pontos</h5><br/><br/>
+                        <h2 id="player_score_casa"></h2>
+                    </center>
+                </div>
+            </div>
+            <div class="ui-block-c center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                    <center><h5>Nível</h5><br/><br/>
+                        <h2 id="player_level_casa"></h2>
+                    </center>
+                </div>
+            </div>
+        </div><!-- /grid-b -->
+    </div>
+    <!-- /footer -->
+</div>
+<!-- /page -->
+
+</body>
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Game Xarax</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+    <link rel="stylesheet" href="css/game.css"/>
+</head>
+<body>
+
+<div data-role="page" id="page_garden_shop">
+
+    <div data-role="header" data-position="fixed" data-theme="c">
+        <h1>Game Xarax</h1>
+        <a href="home.html" data-icon="back" data-rel="back" class="ui-btn-right">Voltar</a>
+    </div>
+    <!-- /header -->
+
+    <div role="main" class="content">
+        <div class="ui-grid-b">
+            <div class="ui-block-a center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                    <center><h5>Total</h5><br/>
+
+                        <h2 id="player_money_garden">$</h2>
+                    </center>
+                </div>
+            </div>
+            <div class="ui-block-b center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                    <center><h5>Gasto</h5><br/>
+
+                        <h2 id="player_gasto_money_garden">$</h2>
+                    </center>
+                </div>
+            </div>
+            <div class="ui-block-c center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                    <center><h5>Ganho</h5><br/>
+
+                        <h2 id="player_ganho_money_garden">$</h2>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <!-- /grid-b -->
+
+        <div class="list-margin">
+            <div data-role="collapsible" data-theme="b" data-collapsed="false" data-content-theme="d" data-inset="true">
+                <h3>Árvores</h3>
+                <ul data-role="listview" data-icon="arrow-r" data-inset="true" id="lista_arvores">
+                    <li id="abacate" data-idade="1" data-tempo="6" data-nomenclatura="Abacate – Persea americana"
+                        data-preco="2800" data-frutos="1" data-preco-fruto="1">
+                        <a href="#">
+                            <img src="images/Abacate.jpg">
+
+                            <h2>Abacate – Persea americana</h2>
+                            <span class="ui-li-count">$2800,00</span>
+                        </a>
+                    </li>
+                    <li id="amoreira_negra" data-idade="1" data-nomenclatura="Amoreira-negra – Morus nigra"
+                        data-tempo="8" data-preco="2500" data-frutos="1" data-preco-fruto="1">
+                        <a href="#">
+                            <img src="images/Amoreira-negra.jpg">
+
+                            <h2>Amoreira-negra – Morus nigra</h2>
+                            <span class="ui-li-count">$2500,00</span>
+                        </a>
+                    </li>
+                    <li id="carambola" data-idade="1" data-tempo="8" data-nomenclatura="Carambola – Averrhoa carambola"
+                        data-preco="2300" data-frutos="1" data-preco-fruto="2">
+                        <a href="#">
+                            <img src="images/Carambola.jpg">
+
+                            <h2>Carambola – Averrhoa carambola</h2>
+                            <span class="ui-li-count">$2300,00</span>
+                        </a>
+                    </li>
+                    <li id="mamao" data-idade="1" data-tempo="4" data-nomenclatura="Mamão – Carica papaya"
+                        data-preco="3300" data-frutos="1" data-preco-fruto="5">
+                        <a href="#">
+                            <img src="images/Mamao.jpg">
+
+                            <h2>Mamão – Carica papaya</h2>
+                            <span class="ui-li-count">$3300,00</span>
+                        </a>
+                    </li>
+                    <li id="coco" data-idade="1" data-tempo="6" data-nomenclatura="Coco – Cocos nucifera"
+                        data-preco="4800" data-frutos="1" data-preco-fruto="5">
+                        <a href="#">
+                            <img src="images/Coco.jpg">
+
+                            <h2>Coco – Cocos nucifera</h2>
+                            <span class="ui-li-count">$4800,00</span>
+                        </a>
+                    </li>
+                    <li id="figueira" data-idade="1" data-tempo="6" data-nomenclatura="Figueira – Ficus carica"
+                        data-preco="8400" data-frutos="1" data-preco-fruto="8">
+                        <a href="#">
+                            <img src="images/Figueira.jpg">
+
+                            <h2>Figueira – Ficus carica</h2>
+                            <span class="ui-li-count">$8400,00</span>
+                        </a>
+                    </li>
+                    <li id="bananeira" data-idade="1" data-tempo="8" data-nomenclatura="Bananeira – Musa sp"
+                        data-preco="10600" data-frutos="1" data-preco-fruto="10">
+                        <a href="#">
+                            <img src="images/bananeira.jpg">
+
+                            <h2>Bananeira – Musa sp</h2>
+                            <span class="ui-li-count">$10600,00</span>
+                        </a>
+                    </li>
+                    <li id="acerola" data-idade="1" data-tempo="6" data-nomenclatura="Acerola – Malpighia emarginata"
+                        data-preco="12400" data-frutos="1" data-preco-fruto="10">
+                        <a href="#">
+                            <img src="images/acerola.jpg">
+
+                            <h2>Acerola – Malpighia emarginata</h2>
+                            <span class="ui-li-count">$12400,00</span>
+                        </a>
+                    </li>
+                    <li id="goiaba" data-idade="1" data-tempo="6" data-nomenclatura="Goiaba – Psidium guajava"
+                        data-preco="14200" data-frutos="1" data-preco-fruto="14">
+                        <a href="#">
+                            <img src="images/goiaba.JPG">
+
+                            <h2>Goiaba – Psidium guajava</h2>
+                            <span class="ui-li-count">$14200,00</span>
+                        </a>
+                    </li>
+                    <li id="framboesa" data-idade="1" data-tempo="8" data-nomenclatura="Framboesa – Rubus idaeus"
+                        data-preco="15800" data-frutos="1" data-preco-fruto="18">
+                        <a href="#">
+                            <img src="images/framboesa.jpg">
+
+                            <h2>Framboesa – Rubus idaeus</h2>
+                            <span class="ui-li-count">$15800,00</span>
+                        </a>
+                    </li>
+                    <li id="manga" data-idade="1" data-tempo="8" data-nomenclatura="Manga – Mangifera indica"
+                        data-preco="23000" data-frutos="1" data-preco-fruto="20">
+                        <a href="#">
+                            <img src="images/manga.jpg">
+
+                            <h2>Manga – Mangifera indica</h2>
+                            <span class="ui-li-count">$23000,00</span>
+                        </a>
+                    </li>
+                    <li id="seriguela" data-idade="1" data-tempo="6" data-nomenclatura="Seriguela – Spondias purpurea"
+                        data-preco="24000" data-frutos="1" data-preco-fruto="22">
+                        <a href="#">
+                            <img src="images/seriguela.jpg">
+
+                            <h2>Seriguela – Spondias purpurea</h2>
+                            <span class="ui-li-count">$24000,00</span>
+                        </a>
+                    </li>
+                    <li id="pitanga" data-idade="1" data-tempo="4" data-nomenclatura="Pitanga – Eugenia uniflora"
+                        data-preco="26000" data-frutos="1" data-preco-fruto="25">
+                        <a href="#">
+                            <img src="images/pitanga.jpg">
+
+                            <h2>Pitanga – Eugenia uniflora</h2>
+                            <span class="ui-li-count">$26000,00</span>
+                        </a>
+                    </li>
+                    <li id="laranja" data-idade="1" data-tempo="6" data-nomenclatura="Laranja – Citrus sinensis"
+                        data-preco="30000" data-frutos="1" data-preco-fruto="28">
+                        <a href="#">
+                            <img src="images/laranja.jpg">
+
+                            <h2>Laranja – Citrus sinensis</h2>
+                            <span class="ui-li-count">$30000,00</span>
+                        </a>
+                    </li>
+                    <li id="limao" data-idade="1" data-tempo="6" data-nomenclatura="Limão – Citrus limon"
+                        data-preco="50000" data-frutos="1" data-preco-fruto="30">
+                        <a href="#">
+                            <img src="images/limao.jpg">
+
+                            <h2>Limão – Citrus limon</h2>
+                            <span class="ui-li-count">$50000,00</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /collapsible -->
+            <div data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="true">
+                <h3>Sementes</h3>
+                <ul data-role="listview" data-icon="arrow-r" data-inset="true" id="lista_sementes">
+                    <li id="semente_abacate" data-idade="0" data-nomenclatura="Abacate – Persea americana"
+                        data-horas="24" data-tempo="6" data-preco="1400" data-frutos="2" data-preco-fruto="1">
+                        <a href="#">
+                            <img src="images/semente_abacate.jpg">
+
+                            <h2>Abacate – Persea americana</h2>
+                            <span class="ui-li-count">$1400,00</span>
+                        </a>
+                    </li>
+                    <li id="semente_amoreira_negra" data-idade="1" data-nomenclatura="Amoreira-negra – Morus nigra"
+                        data-horas="38" data-tempo="8" data-preco="2000" data-frutos="1" data-preco-fruto="1">
+                        <a href="#">
+                            <img src="images/semente_amoreira_negra.jpg">
+
+                            <h2>Amoreira-negra – Morus nigra</h2>
+                            <span class="ui-li-count">$2000,00</span>
+                        </a>
+                    </li>
+                    <li id="semente_carambola" data-idade="1" data-nomenclatura="Carambola – Averrhoa carambola"
+                        data-tempo="8" data-horas="48" data-preco="1150" data-frutos="1" data-preco-fruto="2">
+                        <a href="#">
+                            <img src="images/semente_carambola.jpg">
+
+                            <h2>Carambola – Averrhoa carambola</h2>
+                            <span class="ui-li-count">$1150,00</span>
+                        </a>
+                    </li>
+                    <li id="semente_mamao" data-idade="1" data-nomenclatura="Mamão – Carica papaya" data-horas="46"
+                        data-tempo="4" data-preco="1150" data-frutos="1" data-preco-fruto="2">
+                        <a href="#">
+                            <img src="images/semente_mamao.jpg">
+
+                            <h2>Mamão – Carica papaya</h2>
+                            <span class="ui-li-count">$1150,00</span>
+                        </a>
+                    </li>
+                    <li id="semente_coco" data-idade="1" data-tempo="6" data-nomenclatura="Coco – Cocos nucifera"
+                        data-horas="58" data-preco="1900" data-frutos="1" data-preco-fruto="2">
+                        <a href="#">
+                            <img src="images/semente_coco.jpg">
+
+                            <h2>Coco – Cocos nucifera</h2>
+                            <span class="ui-li-count">$1900,00</span>
+                        </a>
+                    </li>
+                    <li id="semente_figueira" data-idade="1" data-tempo="6" data-nomenclatura="Figueira – Ficus carica"
+                        data-horas="56" data-preco="1200" data-frutos="2" data-preco-fruto="1">
+                        <a href="#">
+                            <img src="images/semente_figueira.jpg">
+
+                            <h2>Figueira – Ficus carica</h2>
+                            <span class="ui-li-count">$1200,00</span>
+                        </a>
+                    </li>
+                    <li id="semente_bananeira" data-idade="1" data-tempo="8" data-nomenclatura="Bananeira – Musa sp"
+                        data-horas="68" data-preco="1300" data-frutos="2" data-preco-fruto="2">
+                        <a href="#">
+                            <img src="images/semente_bananeira.jpg">
+
+                            <h2>Bananeira – Musa sp</h2>
+                            <span class="ui-li-count">$1300,00</span>
+                        </a>
+                    </li>
+                    <li id="semente_acerola" data-idade="1" data-tempo="6"
+                        data-nomenclatura="Acerola – Malpighia emarginata" data-horas="76" data-preco="1200"
+                        data-frutos="1" data-preco-fruto="1">
+                        <a href="#">
+                            <img src="images/semente_acerola.jpg">
+
+                            <h2>Acerola – Malpighia emarginata</h2>
+                            <span class="ui-li-count">$1200,00</span>
+                        </a>
+                    </li>
+                    <li id="semente_goiaba" data-idade="1" data-tempo="6" data-nomenclatura="Goiaba – Psidium guajava"
+                        data-horas="86" data-preco="1100" data-frutos="2" data-preco-fruto="1">
+                        <a href="#">
+                            <img src="images/semente_goiaba.jpg">
+
+                            <h2>Goiaba – Psidium guajava</h2>
+                            <span class="ui-li-count">$1100,00</span>
+                        </a>
+                    </li>
+                    <li id="semente_framboesa" data-idade="1" data-tempo="8"
+                        data-nomenclatura="Framboesa – Rubus idaeus" data-horas="94" data-preco="1400" data-frutos="3"
+                        data-preco-fruto="1">
+                        <a href="#">
+                            <img src="images/semente_framboesa.jpg">
+
+                            <h2>Framboesa – Rubus idaeus</h2>
+                            <span class="ui-li-count">$1400,00</span>
+                        </a>
+                    </li>
+                    <li id="semente_manga" data-idade="1" data-horas="98" data-nomenclatura="Manga – Mangifera indica"
+                        data-tempo="8" data-preco="1500" data-frutos="2" data-preco-fruto="2">
+                        <a href="#">
+                            <img src="images/semente_manga.jpg">
+
+                            <h2>Manga – Mangifera indica</h2>
+                            <span class="ui-li-count">$1500,00</span>
+                        </a>
+                    </li>
+                    <li id="semente_seriguela" data-idade="1" data-tempo="6"
+                        data-nomenclatura="Seriguela – Spondias purpurea" data-horas="96" data-preco="1200"
+                        data-frutos="2" data-preco-fruto="1">
+                        <a href="#">
+                            <img src="images/semente_seriguela.jpg">
+
+                            <h2>Seriguela – Spondias purpurea</h2>
+                            <span class="ui-li-count">$1200,00</span>
+                        </a>
+                    </li>
+                    <li id="semente_pitanga" data-idade="1" data-tempo="4"
+                        data-nomenclatura="Pitanga – Eugenia uniflora" data-horas="99" data-preco="1300" data-frutos="1"
+                        data-preco-fruto="1">
+                        <a href="#">
+                            <img src="images/semente_pitanga.jpg">
+
+                            <h2>Pitanga – Eugenia uniflora</h2>
+                            <span class="ui-li-count">$1300,00</span>
+                        </a>
+                    </li>
+                    <li id="semente_laranja" data-idade="1" data-tempo="6" data-nomenclatura="Laranja – Citrus sinensis"
+                        data-horas="98" data-preco="1500" data-frutos="3" data-preco-fruto="2">
+                        <a href="#">
+                            <img src="images/semente_laranja.jpg">
+
+                            <h2>Laranja – Citrus sinensis</h2>
+                            <span class="ui-li-count">$1500,00</span>
+                        </a>
+                    </li>
+                    <li id="semente_limao" data-idade="1" data-tempo="6" data-nomenclatura="Limão – Citrus limon"
+                        data-horas="99" data-preco="1400" data-frutos="3" data-preco-fruto="1">
+                        <a href="#">
+                            <img src="images/semente_limao.jpg">
+
+                            <h2>Limão – Citrus limon</h2>
+                            <span class="ui-li-count">$1400,00</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /collapsible -->
+        </div>
+
+        <br/>
+
+        <div data-role="popup" id="popup_erro_compra" data-theme="d" data-overlay-theme="b" class="content"
+             style="max-width:340px; padding-bottom:2em;">
+            <center><h2>Você não possui moedas suficiente!</h2></center>
+            <center><a href="#" data-role="button" data-rel="back" data-inline="true" data-mini="true">OK</a></center>
+        </div>
+
+    </div>
+    <!-- /content -->
+
+    <div data-role="footer" data-theme="c" data-position="fixed">
+        <div class="ui-grid-b">
+            <div class="ui-block-a center-wrapper">
+                <div id="div_energia_garden" class="ui-bar ui-bar-b" style="height:60px">
+                    <center><h5>Energia</h5><br/>
+
+                        <h2 id="player_energy_num_garden">100</h2>
+
+                        <h2>%</h2><br/>
+                        <meter id="player_energy_garden" min="0" low="20" max="100" value="90"></meter>
+                    </center>
+                </div>
+            </div>
+            <div class="ui-block-b center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                    <center><h5>Pontos</h5><br/><br/>
+
+                        <h2 id="player_score_garden">2580</h2>
+                    </center>
+                </div>
+            </div>
+            <div class="ui-block-c center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                    <center><h5>Nível</h5><br/><br/>
+
+                        <h2 id="player_level_garden">2</h2>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <!-- /grid-b -->
+    </div>
+
+    <!--<div data-role="popup" id="lotacao_terreno">-->
+    <!--<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>-->
+    <!--<center><h2>Seu terreno está lotado!</h2></center>-->
+    <!--</div>-->
+
+
+    <!--<div data-role="popup" id="success">-->
+    <!--<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>-->
+    <!--<center><h1>Comprado com Sucesso!</h1></center>-->
+    <!--</div>-->
+
+
+    <div data-role="popup" id="popup_compra_garden">
+        <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext"
+           class="ui-btn-right">Close</a>
+        <center><h2>Deseja Comprar ?</h2></center>
+        <center><h3 id="nome_produto"></h3></center>
+        <center>
+            <div id="info_produto" style="margin: 0px 5px 0px 5px;"></div>
+        </center>
+        <center><a href="#" id="comprar_produto" data-role="button" data-theme="b" data-icon="check" data-inline="true"
+                   data-mini="true">Comprar: <span id="valor_produto">$10.99</span></a>
+            <a href="#" data-role="button" data-rel="back" data-inline="true" data-mini="true">Cancel</a></center>
+    </div>
+
+    <!-- /footer -->
+</div>
+<!-- /page -->
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Game Xarax</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css"/>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="page_home">
+
+    <div data-role="header" data-position="fixed" data-theme="c">
+        <h1>Game Xarax</h1>
+        <a href="index.html" data-transition="slide" id="btn_sair" data-role="button" data-icon="delete" class="ui-btn-right">Sair</a>
+    </div>
+    <!-- /header -->
+
+    <div role="main" class="content">
+        <div class="ui-grid-b">
+            <div class="ui-block-a center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                    <center><h5>Total</h5>
+                    <br>
+                    <h2 id="player_money">$ 2000</h2>
+                    </center>
+                </div>
+            </div>
+            <div class="ui-block-b center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                    <center><h5>Gasto</h5><br/>
+                    <h2 id="player_gasto_money">$ 20</h2>
+                    </center>
+                </div>
+            </div>
+            <div class="ui-block-c center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                    <center><h5>Ganho</h5><br/>
+                    <h2 id="player_ganho_money">$ 30</h2>
+                    </center>
+                </div>
+            </div>
+        </div><!-- /grid-b -->
+        <div style="text-align: center;">
+            <h3 id="dia_semana"></h3>
+            <h1 style="font-size: 50px;" id="timer" class="timer"></h1>
+        </div>
+
+        <ul data-role="listview" data-inset="true" style="margin: 0px 15px 0px 15px;">
+            <li><a href="meuespaco.html" class="show-page-loading-msg" data-theme="d"
+                   data-textonly="false" id="btn_meuespaco" data-textvisible="true" data-msgtext="Carregando"
+                   data-inline="true">
+                <img src="images/a_439349265_home.png">
+                <h1 style="font-size: 25px;">Meu Espaço</h1>
+                </a>
+            </li>
+            <li><a href="gardenshop.html" class="show-page-loading-msg" data-theme="d"
+                   data-textonly="false" id="btn_gardenshop" data-textvisible="true" data-msgtext="Carregando"
+                   data-inline="true">
+                <img src="images/1439610129_tree-2.png">
+                <h1 style="font-size: 25px;">Garden Shop</h1>
+            </a>
+            </li>
+            <li><a href="lojaconstrucao.html" id="btn_lojaconstrucao">
+                <img src="images/a_439349294_Symbol_Construction.png">
+                <h1 style="font-size: 25px;">Loja de Construção</h1>
+            </a>
+            </li>
+            <li><a href="lojamaquinas.html" id="btn_maquinas">
+                <img src="images/casa-de-maquinas.jpg">
+                <h1 style="font-size: 25px;">Casa de Máquinas</h1>
+            </a>
+            </li>
+            <li><a href="casadosinsumos.html" id="btn_casadosinsumos">
+                <img src="images/a_439349325_free_26.png">
+                <h1 style="font-size: 25px;">Casa dos Insumos</h1>
+            </a>
+            </li>
+            <!--<li><a href="armazem.html" id="btn_armazem">-->
+                <!--<img src="images/a_439349350_palet03.png">-->
+                <!--<h2>Armazém</h2>-->
+                <!--<p>Venda sua colheita aqui.</p></a>-->
+            <!--</li>-->
+        </ul>
+        <br/>
+    </div>
+    <!-- /content -->
+
+    <div data-role="footer" data-theme="c" data-position="fixed">
+        <div class="ui-grid-b">
+            <div class="ui-block-a center-wrapper">
+                <div id="div_energia" class="ui-bar ui-bar-b" style="height:60px">
+                    <center><h5>Energia</h5><br/><h2 id="player_energy_num">100</h2><h3>%</h3><br/>
+                    <meter id="player_energy" min="0" low="20" max="100" value="90"></meter>
+                    </center>
+                </div>
+            </div>
+            <div class="ui-block-b center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                    <center><h5>Pontos</h5><br/><br/>
+                    <h2 id="player_score">2580</h2>
+                    </center>
+                </div>
+            </div>
+            <div class="ui-block-c center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                   <center><h5>Nível</h5><br/><br/>
+                    <h2 id="player_level">2</h2>
+                   </center>
+                </div>
+            </div>
+        </div><!-- /grid-b -->
+    </div>
+    <!-- /footer -->
+</div>
+<!-- /page -->
+
+</body>
+</html>

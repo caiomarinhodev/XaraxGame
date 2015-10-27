@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Game Xarax</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+    <link rel="stylesheet" href="css/petshop.css"/>
+</head>
+<body>
+
+<div data-role="page" id="page_lojamaquinas">
+
+    <div data-role="header" data-position="fixed" data-theme="c">
+        <h1>Game Xarax</h1>
+        <a href="home.html" data-icon="back" data-rel="back" class="ui-btn-right">Voltar</a>
+    </div>
+    <!-- /header -->
+
+    <div role="main" class="content">
+        <div class="ui-grid-b">
+            <div class="ui-block-a center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                    <center><h5>Total</h5><br/>
+                    <h2 id="player_money_maq"></h2>
+                        </center>
+                </div>
+            </div>
+            <div class="ui-block-b center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                    <center><h5>Gasto</h5><br/>
+                    <h2 id="player_gasto_money_maq"></h2>
+                        </center>
+                </div>
+            </div>
+            <div class="ui-block-c center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                    <center><h5>Ganho</h5><br/>
+                    <h2 id="player_ganho_money_maq"></h2>
+                        </center>
+                </div>
+            </div>
+        </div><!-- /grid-b -->
+
+
+        <div class="list-margin">
+            <div data-role="collapsible" data-collapsed="false" data-theme="b" data-content-theme="d">
+                <h3>Maquinas</h3>
+                <ul data-role="listview" data-inset="true" id="lista_maquinas">
+                    <li id="maquina_1" data-valor="450" data-nomenclatura="Aspirador de Folhas" data-tempo="2">
+                        <a href="#">
+                            <img src="images/aspirador.jpg">
+                            <h2>Aspirador de Folhas</h2>
+                        </a>
+                        <span class="ui-li-count">$ 450,00</span>
+                    </li>
+                    <li id="maquina_2" data-valor="1850" data-nomenclatura="Maquina Rotativa" data-tempo="3">
+                        <a href="#">
+                            <img src="images/maquina_rotativa.jpg">
+                            <h2>Maquina Rotativa</h2>
+                        </a>
+                        <span class="ui-li-count">$ 1850,00</span>
+                    </li>
+                    <li id="maquina_3" data-valor="2550" data-nomenclatura="Maquina Complex" data-tempo="4">
+                        <a href="#">
+                            <img src="images/complex_maquina.jpg">
+                            <h2>Maquina Complex</h2>
+                        </a>
+                        <span class="ui-li-count">$ 2550,00</span>
+                    </li>
+                    <li id="maquina_4" data-valor="3900" data-nomenclatura="Maquina Multi" data-tempo="5">
+                        <a href="#">
+                            <img src="images/maquina_multi.jpg">
+                            <h2>Maquina Multi</h2>
+                        </a>
+                        <span class="ui-li-count">$ 3900,00</span>
+                    </li>
+                </ul>
+            </div><!-- /collapsible -->
+        </div>
+
+        <br/>
+
+    </div>
+    <!-- /content -->
+
+    <div data-role="footer" data-theme="c" data-position="fixed">
+        <div class="ui-grid-b">
+            <div class="ui-block-a center-wrapper">
+                <div id="div_energia" class="ui-bar ui-bar-b" style="height:60px">
+                    <center><h5>Energia</h5><br/><h2 id="player_energy_num_maq">100</h2><h2>%</h2><br/>
+                    <meter id="player_energy_maq" min="0" low="20" max="100" value="90"></meter>
+                    </center>
+                </div>
+            </div>
+            <div class="ui-block-b center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                    <center><h5>Pontos</h5><br/><br/>
+                    <h2 id="player_score_maq"></h2>
+                    </center>
+                </div>
+            </div>
+            <div class="ui-block-c center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                    <center><h5>Nível</h5><br/><br/>
+                    <h2 id="player_level_maq"></h2>
+                    </center>
+                </div>
+            </div>
+        </div><!-- /grid-b -->
+    </div>
+    <!-- /footer -->
+</div>
+<!-- /page -->
+
+</body>
+</html>

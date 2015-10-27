@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Game Xarax</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+    <link rel="stylesheet" href="css/armazem.css"/>
+</head>
+<body>
+
+<div data-role="page">
+
+    <div data-role="header" data-position="fixed" data-theme="c">
+        <h1>Game Xarax</h1>
+        <a href="home.html" data-icon="back" data-rel="back" class="ui-btn-right">Voltar</a>
+    </div>
+    <!-- /header -->
+
+    <div role="main" class="content">
+        <div class="ui-grid-b">
+            <div class="ui-block-a center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                    <h5>Total</h5><br/>
+                    <h4 id="player_money">$ 2000</h4>
+                </div>
+            </div>
+            <div class="ui-block-b center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                    <h5>Gasto p/min</h5><br/>
+                    <h4 id="player_gasto_money">$ 20</h4>
+                </div>
+            </div>
+            <div class="ui-block-c center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                    <h5>Ganho p/min</h5><br/>
+                    <h4 id="player_ganho_money">$ 30</h4>
+                </div>
+            </div>
+        </div><!-- /grid-b -->
+
+        <div class="list-margin">
+            <div data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="false">
+                <h3>Meus Itens</h3>
+                <ul data-role="listview" data-split-icon="check" data-split-theme="d" data-inset="true" id="player_colheita">
+                    <li>
+                        <a href="#">
+                        <img src="">
+                        <h2>Casa 1</h2>
+                        <p>Broken Bells
+                        </p></a>
+                        <span class="ui-li-count">$12,00</span>
+                        <a href="#">
+                            Comprar</a>
+                    </li>
+                </ul>
+            </div><!-- /collapsible -->
+        </div>
+        <br/>
+        <div class="ui-grid-b">
+            <div class="ui-block-a center-wrapper">
+                <div id="div_energia" class="ui-bar ui-bar-b" style="height:60px">
+                    <h5>Energia</h5><br/><br/>
+                    <meter id="player_energy" min="0" low="20" max="100" value="90"></meter>
+                </div>
+            </div>
+            <div class="ui-block-b center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                    <h5>Pontos</h5><br/><br/>
+                    <h4 id="player_score">2580</h4>
+                </div>
+            </div>
+            <div class="ui-block-c center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                    <h5>Nível</h5><br/><br/>
+                    <h2 id="player_level">2</h2>
+                </div>
+            </div>
+        </div><!-- /grid-b -->
+    </div>
+    <!-- /content -->
+
+    <div data-role="footer" data-theme="c">
+        <h4>&copy; Xarax 2015</h4>
+    </div>
+    <!-- /footer -->
+</div>
+<!-- /page -->
+
+</body>
+</html>

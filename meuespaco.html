@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Game Xarax</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="page_meuespaco">
+
+    <div data-role="header" data-position="fixed" data-theme="c">
+        <h1>Game Xarax</h1>
+        <a id="btn_voltar_home" href="home.html" data-icon="back" class="ui-btn-right">Voltar</a>
+    </div>
+    <!-- /header -->
+
+    <div role="main" class="content">
+        <div class="ui-grid-b">
+            <div class="ui-block-a center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                    <center><h5>Total</h5><br/>
+                    <h2 id="player_money_espaco">$ 2000</h2>
+                        </center>
+                </div>
+            </div>
+            <div class="ui-block-b center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                    <center><h5>Gasto</h5><br/>
+                    <h2 id="player_gasto_money_espaco">$ 20</h2>
+                        </center>
+                </div>
+            </div>
+            <div class="ui-block-c center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                    <center><h5>Ganho</h5><br/>
+                    <h2 id="player_ganho_money_espaco">$ 30</h2>
+                        </center>
+                </div>
+            </div>
+        </div><!-- /grid-b -->
+
+        <div class="list-margin">
+            <!--<div data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="false">-->
+                <!--<h3>Pets</h3>-->
+                <!--<ul data-role="listview" id="player_lista_pets">-->
+                    <!--<li><a href="verarvore.html">Canary</a></li>-->
+                <!--</ul>-->
+            <!--</div>&lt;!&ndash; /collapsible &ndash;&gt;-->
+            <div data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="true" id="meuespaco_arvores">
+                <h3>Árvores</h3>
+                <ul data-role='listview' id='player_lista_arvores'>
+
+                </ul>
+            </div><!-- /collapsible -->
+            <div data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="true" id="meuespaco_sementes">
+                <h3>Sementes</h3>
+                <ul data-role='listview' id='player_lista_sementes'>
+
+                </ul>
+            </div><!-- /collapsible -->
+            <div data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="true">
+                <h3>Terrenos</h3>
+                <ul data-role="listview" id="player_lista_terrenos">
+
+                </ul>
+            </div><!-- /collapsible -->
+            <div data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="true">
+                <h3>Insumos</h3>
+                <ul data-role="listview" id="player_lista_insumos">
+
+                </ul>
+            </div><!-- /collapsible -->
+            <div data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="true">
+                <h3>Maquinas</h3>
+                <ul data-role="listview" id="player_lista_maquinas">
+
+                </ul>
+            </div><!-- /collapsible -->
+        </div>
+        <br/>
+    </div>
+    <!-- /content -->
+
+    <div data-role="footer" data-theme="c" data-position="fixed">
+        <div class="ui-grid-b">
+            <div class="ui-block-a center-wrapper">
+                <div id="div_energia" class="ui-bar ui-bar-b" style="height:60px">
+                    <center><h5>Energia</h5><br/><h2 id="player_energy_num_espaco">100</h2><h2>%</h2><br/>
+                    <meter id="player_energy_espaco" min="0" low="20" max="100" value="90"></meter>
+                        </center>
+                </div>
+            </div>
+            <div class="ui-block-b center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                    <center><h5>Pontos</h5><br/><br/>
+                    <h2 id="player_score_espaco">2580</h2>
+                        </center>
+                </div>
+            </div>
+            <div class="ui-block-c center-wrapper">
+                <div class="ui-bar ui-bar-b" style="height:60px">
+                    <center><h5>Nível</h5><br/><br/>
+                    <h2 id="player_level_espaco">2</h2>
+                        </center>
+                </div>
+            </div>
+        </div><!-- /grid-b -->
+    </div>
+    <!-- /footer -->
+</div>
+<!-- /page -->
+
+</body>
+</html>
